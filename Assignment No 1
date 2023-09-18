@@ -1,0 +1,49 @@
+Problem Statement : Implement a problem of number of zeroes.
+Statement: Given an array of 1s and 0s which has all 
+1s first followed by all 0s? Find the number of 0s. 
+Count the number of zeroes in the given array.
+Input: arr[] = {1, 1, 1, 1, 0, 0} Output: 2
+Input: arr[] = {1, 0, 0, 0, 0} Output: 4
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int n,i,count=0;
+int arr[5];
+cout<<"\n Enter size of Array : ";
+cin>>n;
+cout<<"\n Enter Array Element : ";
+
+for(i=0;i<n;i++)
+{
+	cin>>arr[i];
+}
+
+for(i=0;i<n;i++)
+{
+	if(arr[i]==0)
+	{
+		count++;
+	}
+}
+	cout<<"\t Total Zero's : "<<count<<endl;
+
+return 0;
+}
+
+Output:
+gauri@gauri-IdeaPad-3-15ADA05-Ua:~$ ./a.out
+
+ Enter size of Array : 5
+
+ Enter Array Element : 1 1 1 0 0
+	 Total Zero's : 2
+gauri@gauri-IdeaPad-3-15ADA05-Ua:~$ g++ pa1.cpp
+gauri@gauri-IdeaPad-3-15ADA05-Ua:~$ ./a.out
+
+ Enter size of Array : 5
+
+ Enter Array Element : 1 0 0 0 0
+	 Total Zero's : 4
